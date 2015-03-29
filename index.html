@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--#include virtual="/include/head-meta.html" -->
+<!--#include virtual="/include/iehack.html" -->
+</head>
+<body>
+<!--#include virtual="/include/header.html" -->
+<div class="wrap">
+    <div id="main">
+        <ul class="flex-around company-list">
+            <li class="flex-item-last add-company"></li>
+            <li>
+                <h6>${company_name}</h6>
+                <p>${company_location}, ${company_industry}</p>
+
+                <p>预测估值：${company_evaluation}</p>
+                <p>最相似公司：${similar_company_name}</p>
+                <p>BB公司估值：${similar_company_evaluation}</p>
+                <p>创始人：${founder}</p>
+                <a href="company-detail.html?id=${company_id}" class="view-more">查看更多</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--#include virtual="/include/nav.html" -->
+</div>
+<!--#include virtual="/include/js.html" -->
+</body>
+</html>

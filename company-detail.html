@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--#include virtual="/include/head-meta.html" -->
+<!--#include virtual="/include/iehack.html" -->
+</head>
+<body>
+<!--#include virtual="/include/header.html" -->
+<div class="wrap">
+    <div id="main">
+        <div class="page-nav">
+            <a href="index.html"></a>
+            &gt;
+            <span>${company_name}</span>
+        </div>
+
+        <div class="panel">
+            <h3>公司基本信息</h3>
+            <section>
+                <table class="grid-column-head">
+                    <tr>
+                        <th>公司名称</th>
+                        <td>${company_name}</td>
+                        <th>行业</th>
+                        <td>${company_industry}</td>
+                    </tr>
+                    <tr>
+                        <th>创始人</th>
+                        <td>${founder}</td>
+                        <th>最相似公司</th>
+                        <td>${similar_company_name}</td>
+                    </tr>
+                    <tr>
+                        <th>投资人</th>
+                        <td>${investor}</td>
+                        <th>目前阶段</th>
+                        <td>${invest_stage}</td>
+                    </tr>
+                    <tr>
+                        <th>成立时间</th>
+                        <td>${create_time}</td>
+                        <th>官方网站</th>
+                        <td>${official_website}</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+
+        <div class="panel">
+            <h3>估值信息</h3>
+            <section>
+                <p><em>数据最新更新时间：<time>${Date.format(evaluation_update_time, 'yyyy-MM-dd hh:mm')}</time></em></p>
+                <span class="large-show">${company_evaluation}</span>
+            </section>
+        </div>
+        <div class="panel">
+            <h3>公司简介</h3>
+            <section>${company_summary}</section>
+        </div>
+        <div class="panel">
+            <h3>融资消息</h3>
+            <section>
+                <table class="grid">
+                    <thead>
+                        <tr>
+                            <th>受资方</th>
+                            <th>投资方</th>
+                            <th>投资金额</th>
+                            <th>投资时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>${company_name}</td>
+                            <td>${investor}</td>
+                            <td>${invest_amount}</td>
+                            <td>${invest_time}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div class="panel">
+            <h3>联系方式</h3>
+            <section>
+                <p>传&nbsp;&nbsp;真：${company_fax}</p>
+                <p>联系电话：${company_phone}</p>
+                <p>邮政编码：${company_zipcode}</p>
+                <p>详细地址：${company_address}</p>
+            </section>
+        </div>
+        <div class="panel">
+            <h3>公司新闻</h3>
+            <section>
+                <ul>
+                    <li><time>${news_time}</time>
+                        <a href="${news_link}" class="news-title">${news_title}</a>
+                        <span class="news-source">${news_source}</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!--#include virtual="/include/nav.html" -->
+</div>
+<!--#include virtual="/include/js.html" -->
+</body>
+</html>
